@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/10/24 14:16:06 by afaucher          #+#    #+#             */
+/*   Updated: 2022/10/24 14:16:08 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "libft.h"
+
+int	ft_tolower(int c)
+{
+	int	lower;
+
+	lower = 0;
+	if (!(c >= 65 && c <= 90))
+		return (c);
+	else
+		lower = c + 32;
+	return (lower);
+}
+/*
 
 int main(void)
 {
-	void	*mlx_ptr;
-
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	printf("%d\n", ft_tolower('C'));
 }
+*/

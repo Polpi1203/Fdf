@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/02 18:10:00 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/02 20:52:45 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "libft.h"
 
-int main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	void	*mlx_ptr;
+	unsigned int	i;
 
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

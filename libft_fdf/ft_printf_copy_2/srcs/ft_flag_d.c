@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_flag_d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/06 16:56:43 by polpi             #+#    #+#             */
+/*   Updated: 2023/02/14 15:18:10 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "ft_printf.h"
 
-int main(void)
+int	ft_flag_d(int c)
 {
-	void	*mlx_ptr;
+	int	len;
 
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	len = ft_putnbr_pf(c);
+	return (len);
 }

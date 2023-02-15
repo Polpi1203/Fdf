@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/01 09:42:34 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/06 10:28:44 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "libft.h"
 
-int main(void)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	void	*mlx_ptr;
+	size_t	i;
 
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	i = 0;
+	if (!dst && !src)
+		return (0);
+	if (dst > src)
+	{
+		while (i < len)
+		{
+			((char *)dst)[len - i - 1] = ((char *)src)[len - i - 1];
+			i++;
+		}
+	}
+	else
+	{
+		while (i < len)
+		{
+			((char *)dst)[i] = ((char *)src)[i];
+			i++;
+		}
+	}
+	return (dst);
 }

@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/02 20:42:48 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/02 20:45:33 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "libft.h"
 
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write (fd, &s[i], 1);
+		i++;
+	}
+}
+/*
 int main(void)
 {
-	void	*mlx_ptr;
+	char	*s;
 
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	s = "Je vais a la boulangerie";
+
+	ft_putstr_fd(s, 1);
 }
+*/

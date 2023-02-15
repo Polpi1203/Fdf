@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_flag_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/15 16:16:19 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/17 11:28:50 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "ft_printf.h"
 
-int main(void)
+int	ft_flag_u(unsigned int nbr)
 {
-	void	*mlx_ptr;
+	int	len;
 
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	len = 0;
+	len = ft_unsigned_putnbr(nbr);
+	if (nbr == 0)
+		return (len + 1);
+	return (len);
 }

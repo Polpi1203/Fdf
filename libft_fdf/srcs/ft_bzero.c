@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/10/25 13:43:53 by afaucher          #+#    #+#             */
+/*   Updated: 2022/11/01 13:45:56 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "libft.h"
 
+void	ft_bzero(void *str, size_t n)
+{
+	ft_memset(str, '\0', n);
+}
+/*
 int main(void)
 {
-	void	*mlx_ptr;
+	char    str[50] = "Je vais chercher du pain a la boulangerie";
 
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
-}
+	ft_bzero(str, 5);
+}*/

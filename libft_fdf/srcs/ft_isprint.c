@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/10/24 14:16:06 by afaucher          #+#    #+#             */
+/*   Updated: 2022/10/30 16:36:36 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "libft.h"
 
-int main(void)
+int	ft_isprint(int c)
 {
-	void	*mlx_ptr;
-
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	if (!((c >= 32 && c <= 126)))
+		return (0);
+	else
+		return (1);
 }

@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_strlen_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/11 15:46:48 by afaucher          #+#    #+#             */
+/*   Updated: 2022/11/15 20:08:47 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "printf.h"
 
-int main(void)
+int	ft_strlen_int(int nbr)
 {
-	void	*mlx_ptr;
+	int	i;
 
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	i = 0;
+	if (nbr == 0)
+		return (i + 1);
+	while (nbr != 0)
+	{
+		i++;
+		nbr = nbr / 10;
+	}
+	return (i);
 }

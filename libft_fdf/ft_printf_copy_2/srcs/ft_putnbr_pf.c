@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_putnbr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/02 20:57:18 by polpi             #+#    #+#             */
+/*   Updated: 2023/02/14 15:18:10 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "ft_printf.h"
 
-int main(void)
+int	ft_putnbr_pf(int n)
 {
-	void	*mlx_ptr;
+	int		i;
 
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	i = 0;
+	if (n == -2147483648)
+	{
+		ft_putstr_pf("-2147483648");
+		i++;
+	}
+	else
+	{
+		if (n < 0)
+		{
+			n = n * -1;
+			write (1, "-", 1);
+			i++;
+		}
+		if (n > 9)
+			ft_putnbr_pf(n / 10);
+		ft_putchar_pf((n % 10 + '0'));
+	}
+	i += ft_strlen_int(n);
+	return (i);
 }

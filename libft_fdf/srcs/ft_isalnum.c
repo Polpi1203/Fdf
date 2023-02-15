@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/10/24 14:34:18 by afaucher          #+#    #+#             */
+/*   Updated: 2022/11/01 14:42:21 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "libft.h"
 
-int main(void)
+int	ft_isalnum(int c)
 {
-	void	*mlx_ptr;
-
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	if (!((c >= 48 && c <= 57)
+			|| ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))))
+	{
+		return (0);
+	}
+	else
+		return (1);
 }

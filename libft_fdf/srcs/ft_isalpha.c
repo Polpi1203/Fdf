@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/10/24 13:50:36 by afaucher          #+#    #+#             */
+/*   Updated: 2022/11/01 14:23:55 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "libft.h"
 
+int	ft_isalpha(int c)
+{
+	if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
+		return (0);
+	else
+		return (1);
+}
+/*
 int main(void)
 {
-	void	*mlx_ptr;
-
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	printf("%d\n", ft_isalpha('A'));
 }
+*/

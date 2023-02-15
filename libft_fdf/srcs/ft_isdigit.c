@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 11:02:39 by polpi            ###   ########.fr       */
+/*   Created: 2022/10/24 14:16:06 by afaucher          #+#    #+#             */
+/*   Updated: 2022/11/01 13:45:56 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
+#include "libft.h"
 
+int	ft_isdigit(int c)
+{
+	if (!(c >= 48 && c <= 57))
+		return (0);
+	else
+		return (1);
+}
+/*
 int main(void)
 {
-	void	*mlx_ptr;
+	int a;
 
-	mlx_ptr = mlx_init();
-	free(mlx_ptr);
+	a = ft_isdigit(5);
 }
+*/
