@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/18 20:22:06 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/18 20:35:09 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,36 @@
 		deviennent des structur contenant x,y,z ou que x,y ? 
 	
 
+	ALLER VOIR CHATGPT -- IDEE DE FONCTION POUR PARSE -- : 
+	int **parse_map(char *filename)
+	{
+		int fd;
+		char *line;
+		int **map;
+		int i = 0;
+
+		fd = open(filename, O_RDONLY);
+		if (fd == -1)
+			return (NULL);
+
+		map = malloc(sizeof(int *) * MAP_HEIGHT);
+		while (get_next_line(fd, &line) > 0 && i < MAP_HEIGHT)
+		{
+			char **strs = ft_split(line, ' ');
+			map[i] = malloc(sizeof(int) * MAP_WIDTH);
+			int j = 0;
+			while (strs[j] != NULL && j < MAP_WIDTH)
+			{
+				map[i][j] = atoi(strs[j]);
+				j++;
+			}
+			i++;
+			free_strs(strs);
+		}
+
+		close(fd);
+		return (map);
+	}
 
 
 */
