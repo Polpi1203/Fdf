@@ -12,14 +12,14 @@ OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_FILES))
 
 # GNL
 
-GNL_DIR = ./ft_get_next_line_copy_2/srcs/
+GNL_DIR = ./gnl/srcs/
 GNL_SRC_FILES = get_next_line_bonus.c get_next_line_utils_bonus.c get_next_line_utils.c get_next_line.c
 GNL_OBJ_FILES = $(GNL_SRC_FILES:.c=.o)
 OBJ_GNL = $(addprefix $(OBJ_DIR)/, $(GNL_OBJ_FILES))
 
 # Printf
 
-PRINTF_DIR = ./ft_printf_copy_2/srcs/
+PRINTF_DIR = ./ft_printf/srcs/
 PRINTF_SRC_FILES = ft_convert_base.c ft_convert_long.c ft_flag_c.c ft_flag_d.c \
 					ft_flag_prc.c ft_flag_s.c ft_flag_u.c ft_printf.c ft_putchar_pf.c \
 					ft_putnbr_pf.c ft_putstr_pf.c ft_strlen_int.c ft_unsigned_putnbr.c 
