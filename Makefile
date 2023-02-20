@@ -6,7 +6,7 @@
 #    By: polpi <polpi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 09:28:26 by polpi             #+#    #+#              #
-#    Updated: 2023/02/15 09:47:16 by polpi            ###   ########.fr        #
+#    Updated: 2023/02/20 07:06:36 by polpi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,16 +18,16 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = fdf
 SRC_DIR = ./src
 OBJ_DIR = ./obj
-SRC_FILES = main.c read_file.c map.c draw.c utils.c
+SRC_FILES = fdf.c draw.c parse.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
 OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_FILES))
 
 # Libft
-LIBFT_DIR = ./libft
+LIBFT_DIR = ./libft_fdf
 LIBFT = $(LIBFT_DIR)/libft.a
 
 # Minilibx
-MINILIBX_DIR = ./minilibx
+MINILIBX_DIR = ./minilibx_macos
 MINILIBX = $(MINILIBX_DIR)/libmlx.a
 FRAMEWORKS = -framework OpenGL -framework AppKit
 

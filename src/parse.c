@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:19 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/18 20:01:32 by polpi            ###   ########.fr       */
+/*   Created: 2023/02/18 19:49:35 by polpi             #+#    #+#             */
+/*   Updated: 2023/02/20 07:19:52 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
-
+#include "fdf.h"
 #include "../libft_fdf/gnl/srcs/get_next_line.h"
-#include "../libft_fdf/ft_printf/srcs/ft_printf.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-typedef struct s_vector {
-    int size_x;
-    int size_y;
-}   t_vector;
+/*Forget size x and y*/
 
+int get_mapsize(char **map)
+{
+    int fd;
+    char    *line;
 
-
-#endif
+    fd = open(map[1], O_RDONLY);
+    // Boucle while pour lire le fichier tant que c'est pas fini
+    // split pour separer
+    // atoi pour transformer
+    line = get_next_line(fd);
+    printf("Line -> %s\n", line);
+    
+    return (1);
+}

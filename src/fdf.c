@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse.c                                            :+:      :+:    :+:   */
+/*   fdf.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 19:49:35 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/18 20:22:06 by polpi            ###   ########.fr       */
+/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
+/*   Updated: 2023/02/20 07:17:39 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+#include <stdlib.h>
 
-/*Forget size x and y*/
 
-int get_mapsize(char **map)
+int main(int ac, char **av)
 {
-    int index;
-    char    **test;
-
-    index = -1;
-    test = get_next_line(map);    
-    return (1);
+    (void)ac;
+    get_mapsize(av);
+    return(1);
 }

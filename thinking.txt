@@ -1,25 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/18 20:35:09 by polpi            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "minilibx_macos/mlx.h"
-#include <stdlib.h>
 /*
 
 	Faire une structure qui prend en charge
-		la largeur et la hauteur de la map
+		la largeur et la hauteur de la map -- OK
 	Egalement faire une structure global qui 
 		reprendra toutes les structures que nous
 		aurons pu creer afin de passer uniquement
-		celle-ci au differentes fonctions.
+		celle-ci au differentes fonctions. --OK (env)
 	Apres avoir reussi a avoir la hauteur et la largeur
 		recuperer ligne par ligne avec GNL et spliter
 		chaque caracter afin de le stocker dans un tableau
@@ -69,15 +55,3 @@
 
 
 */
-int main(void)
-{
-
-
-
-
-
-	// void	*mlx_ptr;
-
-	// mlx_ptr = mlx_init();
-	// free(mlx_ptr);
-}
