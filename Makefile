@@ -6,7 +6,7 @@
 #    By: polpi <polpi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 09:28:26 by polpi             #+#    #+#              #
-#    Updated: 2023/02/20 07:06:36 by polpi            ###   ########.fr        #
+#    Updated: 2023/02/22 18:40:58 by polpi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = fdf
 SRC_DIR = ./src
 OBJ_DIR = ./obj
-SRC_FILES = fdf.c draw.c parse.c
+SRC_FILES = fdf.c draw.c parse.c int_to_float.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
 OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_FILES))
 
