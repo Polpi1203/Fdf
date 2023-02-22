@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 19:49:35 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/22 15:42:25 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/22 15:55:31 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void get_mapsize(char **av, t_env *env)
 		env->line = get_next_line(fd);
 		env->size_map.w++;
 	}
+	free (env->line);
 	close (fd);
 }
 
@@ -41,14 +42,11 @@ void	create_int_map(t_env *env)
 	int	index;
 	int	i;
 
-	i = 0;
+	i = -1;
 	index = env->size_map.h;
 	env->map = malloc(sizeof(int*) * env->size_map.h);
-	while (i <= index)
-	{
+	while (++i <= index)
 		env->map[i] = malloc(sizeof(int) * env->size_map.w);
-		i++;
-	}
 }
 
 void	add_number_in_map(t_env *env, char **av)
@@ -69,6 +67,7 @@ void	add_number_in_map(t_env *env, char **av)
 		i++;
 		env->line = get_next_line(fd);
 	}
+	free (env->line);
 	free (env->map_char);
 	close (fd);
 }
