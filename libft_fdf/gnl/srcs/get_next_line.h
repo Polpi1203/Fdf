@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 15:42:38 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/25 15:13:00 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/22 14:29:20 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@
 # include <string.h>
 # include <fcntl.h>
 
-int			ft_strlen(const char *str);
-char		*ft_strchr(char *str, int c);
-char		*ft_strjoin(char const *s1, char const *s2);
+int			ft_strlen_gnl(const char *str);
+char		*ft_strchr_gnl(char *str, int c);
+char		*ft_strjoin_gnl(char const *s1, char const *s2);
 char		*get_next_line(int fd);
 char		*ft_fill_stash(int fd, char *stash);
 char		*ft_extract_line(char *stash);

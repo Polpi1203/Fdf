@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 15:42:39 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/29 09:33:44 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/22 14:29:53 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_new_stash(char *stash)
 		i++;
 	if (stash[i] == '\n')
 		i++;
-	line = malloc(sizeof(char) * ft_strlen(stash) - i + 1);
+	line = malloc(sizeof(char) * ft_strlen_gnl(stash) - i + 1);
 	if (line == NULL)
 		return (NULL);
 	while (stash[i] != '\0')
@@ -78,7 +78,7 @@ char	*ft_fill_stash(int fd, char *stash)
 	buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (buff == NULL)
 		return (NULL);
-	while (rd != 0 && ft_strchr(stash, '\n') == 0)
+	while (rd != 0 && ft_strchr_gnl(stash, '\n') == 0)
 	{
 		rd = read(fd, buff, BUFFER_SIZE);
 		if (rd == -1)
@@ -87,7 +87,7 @@ char	*ft_fill_stash(int fd, char *stash)
 			return (NULL);
 		}
 		buff[rd] = '\0';
-		stash = ft_strjoin (stash, buff);
+		stash = ft_strjoin_gnl(stash, buff);
 	}
 	free (buff);
 	return (stash);
