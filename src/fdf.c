@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/23 13:47:52 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/23 15:02:34 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int	main(int ac, char **av)
 		return (0);
 	define_struct(&env);
 	get_map(av, &env);
-	printf("value H -> %d | Value W -> %d\n", env.size_map.h, env.size_map.w);
+	//printf("value H -> %d | Value W -> %d\n", env.size_map.h, env.size_map.w);
 	convert_int_to_float (&env);
+	init_img_and_window(&env);
 	return (1);
 }

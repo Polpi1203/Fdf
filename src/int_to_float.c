@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:43:11 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/23 13:26:11 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:02:25 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ void	convert_int_to_float(t_env *env)
 			i++;
 		}
 	}
-	i = -1;
+}
+
+/*
+i = -1;
 	while (++i < (x * y))
 		printf("env->mapf[i].x -> %f | env->mapf[i].y -> %f\n", env->mapf[i].x, env->mapf[i].y);
-}
+*/
