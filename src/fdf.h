@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 09:28:19 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/23 13:20:04 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/23 13:38:12 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_size_map {
 	int	w;
 	int	h;
 }	t_size_map;
-
+o#N3e?5gGY8Di7kQ!jhB
 typedef struct s_env {
 	t_size_map	size_map;
 	t_mapf		*mapf;
