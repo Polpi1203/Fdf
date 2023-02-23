@@ -6,13 +6,14 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 15:42:39 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/22 14:29:53 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/23 13:55:48 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-//Extrait de ma stash l'excédent à la ligne précédemment retourner pour la conserver lors du prochain appel de la fonction principale
+/*Extrait de ma stash l'excédent à la ligne précédemment 
+retourner pour la conserver lors du prochain appel de la fonction principale*/
 char	*ft_new_stash(char *stash)
 {
 	int		i;

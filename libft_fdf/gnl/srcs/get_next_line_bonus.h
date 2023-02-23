@@ -6,15 +6,15 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 09:36:43 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/29 09:40:47 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/23 13:57:45 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 5
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
 # endif
 
 # include <stdio.h>
@@ -31,4 +31,4 @@ char		*ft_fill_stash(int fd, char *stash);
 char		*ft_extract_line(char *stash);
 char		*ft_new_stash(char *stash);
 
-# endif
+#endif

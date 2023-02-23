@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:46:01 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/14 15:16:40 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/23 13:54:56 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int		ft_unsigned_putnbr(unsigned int nbr);
 int		ft_flag_u(unsigned int nbr);
 int		ft_flag_prc(int c);
 int		ft_convert_base(unsigned int nbr, char *str);
-int		ft_convert_long(unsigned long nbr, char *str);
+int		ft_l(unsigned long nbr, char *str);
 
 #endif
