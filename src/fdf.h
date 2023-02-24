@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 09:28:19 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/23 15:16:50 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/24 15:15:48 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@
 # include <math.h>
 # include <stdlib.h>
 # include <stdio.h>
+
+# define RED 0xFF0000
+
+# define WINDOW_W 1920
+# define WINDOW_H 1080
 
 typedef struct s_mapf {
 	float	x;
@@ -50,6 +55,9 @@ typedef struct s_env {
 	int			angle;
 	void		*mlx;
 	void		*mlx_win;
+	int			i_x;
+	int			i_y;
+	int			count;
 }	t_env;
 
 /*Define Struct*/
@@ -70,5 +78,10 @@ void	check_error(char *msg);
 /*Draw*/
 void	init_img_and_window(t_env *env);
 void	my_mlx_pixel_put(t_env *env, int x, int y, int color);
+void	ft_draw_line(t_env *env, int x1, int y1, int x2, int y2, int color);
+
+/*Limits*/
+void    define_limits(t_env *env);
+void	check_limits(t_env *env, int i);
 
 #endif

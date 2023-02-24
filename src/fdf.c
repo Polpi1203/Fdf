@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/23 15:02:34 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/24 15:27:57 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	define_struct(t_env *env)
 {
-	env->angle = 120;
+	env->angle = 20;
 	env->size_map.w = 0;
 	env->size_map.h = 0;
 }
@@ -27,7 +27,7 @@ int	main(int ac, char **av)
 		return (0);
 	define_struct(&env);
 	get_map(av, &env);
-	//printf("value H -> %d | Value W -> %d\n", env.size_map.h, env.size_map.w);
+	printf("value H -> %d | Value W -> %d\n", env.size_map.h, env.size_map.w);
 	convert_int_to_float (&env);
 	init_img_and_window(&env);
 	return (1);

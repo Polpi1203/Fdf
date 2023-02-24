@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:43:11 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/23 15:02:25 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/24 15:36:51 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,14 @@ void	convert_int_to_float(t_env *env)
 			+ env->map[y][x] * cosf (env->angle - 2);
 			env->mapf[i].y = y * sinf(env->angle) + x * sinf(env->angle + 2) \
 			+ env->map[y][x] * sinf(env->angle - 2);
+			env->mapf[i].x *= -20;
+			env->mapf[i].y *= 20; 
 			i++;
 		}
 	}
-}
-
-/*
-i = -1;
+	i = -1;
 	while (++i < (x * y))
 		printf("env->mapf[i].x -> %f | env->mapf[i].y -> %f\n", env->mapf[i].x, env->mapf[i].y);
-*/
+}
+
+
