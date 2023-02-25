@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   int_to_float.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:43:11 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/24 15:48:34 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/25 09:28:28 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,14 @@ void	convert_int_to_float(t_env *env)
 			env->mapf[i].y = y * sinf(env->angle) + x * sinf(env->angle + 2) \
 			+ -env->map[y][x] * sinf(env->angle - 2);
 			env->mapf[i].x *= -20;
-			env->mapf[i].y *= 20; 
+			env->mapf[i].y *= 20;
 			i++;
 		}
 	}
-	i = -1;
-	while (++i < (x * y))
-		printf("env->mapf[i].x -> %f | env->mapf[i].y -> %f\n", env->mapf[i].x, env->mapf[i].y);
 }
 
-
+/*
+i = -1;
+while (++i < (x * y))
+	printf("env->mapf[i].x -> %f | env->mapf[i].y -> %f\n", env->mapf[i].x, env->mapf[i].y);
+*/

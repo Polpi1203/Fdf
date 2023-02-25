@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 09:28:19 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/24 15:15:48 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/25 09:27:57 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ typedef struct s_size_map {
 	int	h;
 }	t_size_map;
 
-
-typedef struct	s_data {
+typedef struct s_data {
 	void	*img;
 	char	*addr;
 	int		bits_per_pixel;
@@ -57,6 +56,8 @@ typedef struct s_env {
 	void		*mlx_win;
 	int			i_x;
 	int			i_y;
+	float		delta_x;
+	float		delta_y;
 	int			count;
 }	t_env;
 
@@ -78,10 +79,10 @@ void	check_error(char *msg);
 /*Draw*/
 void	init_img_and_window(t_env *env);
 void	my_mlx_pixel_put(t_env *env, int x, int y, int color);
-void	ft_draw_line(t_env *env, int x1, int y1, int x2, int y2, int color);
+void	ft_draw_line(t_env *env, t_mapf vector0, t_mapf vector1, int color);
 
 /*Limits*/
-void    define_limits(t_env *env);
+void	define_limits(t_env *env);
 void	check_limits(t_env *env, int i);
 
 #endif

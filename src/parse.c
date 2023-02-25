@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 19:49:35 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/24 15:25:17 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/25 09:26:45 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,18 +78,20 @@ void	add_number_in_map(t_env *env, char **av)
 
 void	get_map(char **av, t_env *env)
 {
-	// int	i;
-	// int	j;
 	get_mapsize(av, env);
 	create_int_map(env);
 	add_number_in_map(env, av);
-
-  	// i = -1;
-	// while (++i < env->size_map.w)
-	// {
-	// 	j = -1;
-	// 	while (++j < env->size_map.h)
-	// 		printf("%d-", env->map[i][j]);
-	// 	printf("\n");
-	// }
 }
+
+/*
+int	i;
+int	j;
+	i = -1;
+while (++i < env->size_map.w)
+{
+	j = -1;
+	while (++j < env->size_map.h)
+		printf("%d-", env->map[i][j]);
+	printf("\n");
+}
+*/
