@@ -3,14 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   int_to_float.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:43:11 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/25 09:28:28 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/25 13:36:56 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+float	average(t_env *env)
+{
+	float	average;
+	int		i;
+	int		j;
+
+	i = -1;
+	average = 0;
+	while (++i < env->size_map.w)
+	{
+		j = -1;
+		while (++j < env->size_map.h)
+			average += env->map[i][j];
+	}
+	average /= (j * i);
+	return (average);
+}
 
 void	convert_int_to_float(t_env *env)
 {
@@ -28,11 +46,11 @@ void	convert_int_to_float(t_env *env)
 		x = -1;
 		while (++x < env->size_map.h)
 		{
-			env->mapf[i].x = x * cosf(env->angle) + x * cosf (env->angle + 2) \
-			+ -env->map[y][x] * cosf (env->angle - 2);
-			env->mapf[i].y = y * sinf(env->angle) + x * sinf(env->angle + 2) \
-			+ -env->map[y][x] * sinf(env->angle - 2);
-			env->mapf[i].x *= -20;
+			env->mapf[i].x = x * cosf(env->angle) + y * cosf (env->angle + 2) \
+			+ env->map[y][x] / average(env) * cosf (env->angle - 2);
+			env->mapf[i].y = x * sinf(env->angle) + y * sinf(env->angle + 2) \
+			+ env->map[y][x] / average(env) * sinf(env->angle - 2);
+			env->mapf[i].x *= 20;
 			env->mapf[i].y *= 20;
 			i++;
 		}

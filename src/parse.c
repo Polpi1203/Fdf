@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 19:49:35 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/25 09:26:45 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/25 13:37:31 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,11 @@ void	get_mapsize(char **av, t_env *env)
 	while (env->line[++i])
 	{
 		if (env->line[i] == ' ')
+		{
+			while (env->line[i] == ' ')
+				i++;
 			env->size_map.h++;
+		}
 	}
 	while (env->line)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 09:28:19 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/25 09:27:57 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/25 13:32:15 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-# define RED 0xFF0000
+# define RED 0x0000FF00
 
 # define WINDOW_W 1920
 # define WINDOW_H 1080
@@ -72,6 +72,7 @@ void	add_number_in_map(t_env *env, char **av);
 
 /*int_to_float*/
 void	convert_int_to_float(t_env *env);
+float	average(t_env *env);
 
 /*dispay_and_error*/
 void	check_error(char *msg);
