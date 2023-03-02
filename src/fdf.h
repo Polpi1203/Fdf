@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 09:28:19 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/25 13:32:15 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/03/02 10:56:57 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,11 @@ void	ft_draw_line(t_env *env, t_mapf vector0, t_mapf vector1, int color);
 /*Limits*/
 void	define_limits(t_env *env);
 void	check_limits(t_env *env, int i);
+
+/*Hooks*/
+void	set_hooks(t_env *env);
+int		handle_no_event(t_env *env);
+int 	handle_input(int keysym, t_env *env);
+void	destroy(t_env *env);
 
 #endif

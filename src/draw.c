@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 14:55:22 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/25 13:39:53 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/03/02 10:53:54 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	init_img_and_window(t_env *env)
 					&env->img.line_length, &env->img.endian);
 	define_limits(env);
 	mlx_put_image_to_window(env->mlx, env->mlx_win, env->img.img, 0, 0);
+	set_hooks(env);
 	mlx_loop(env->mlx);
 }
 

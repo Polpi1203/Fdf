@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   hooks.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 09:28:22 by polpi             #+#    #+#             */
-/*   Updated: 2023/03/02 11:03:25 by polpi            ###   ########.fr       */
+/*   Created: 2023/03/02 10:33:31 by polpi             #+#    #+#             */
+/*   Updated: 2023/03/02 11:05:41 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void	define_struct(t_env *env)
+void	set_hooks(t_env *env)
 {
-	env->angle = 26;
-	env->size_map.w = 0;
-	env->size_map.h = 0;
+	mlx_loop_hook(env->mlx, &handle_no_event, env);
+	mlx_key_hook(env->mlx_win, &handle_input, env);
 }
 
-int	main(int ac, char **av)
+void	destroy(t_env *env)
 {
-	t_env	env;
+	mlx_destroy_window(env->mlx, env->mlx_win);
+	mlx_destroy_image(env->mlx, env->img.img);
+	free (env->mlx);
+}
 
-	if (ac != 2)
-		return (0);
-	define_struct(&env);
-	get_map(av, &env);
-	convert_int_to_float (&env);
-	init_img_and_window(&env);
-	free (env.mapf);
-	free (env.map);
-	return (1);
+int	handle_no_event(t_env *env)
+{
+	(void)env;
+	return (0);
+}
+
+int handle_input(int keysym, t_env *env)
+{
+	if (keysym == 53)
+		destroy(env);
+	return (0);
 }
