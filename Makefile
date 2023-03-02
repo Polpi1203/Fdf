@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: polpi <polpi@student.42.fr>                +#+  +:+       +#+         #
+#    By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 09:28:26 by polpi             #+#    #+#              #
-#    Updated: 2023/03/02 10:33:51 by polpi            ###   ########.fr        #
+#    Updated: 2023/03/02 11:24:21 by afaucher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Compilateur et options de compilation
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g -w
 
 # Noms des fichiers
 NAME = fdf
